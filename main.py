@@ -1,15 +1,16 @@
-# imports: json
+# Will later add sys for user control
+import json
 
-# hardcoded variables for the functions
+from get_data import get_data
+from clean_data import clean_data
 
-# call function to get data from API => create python dictionary object (lets call this raw_data)
-#   (this will need the lat and long of the area, I will hardcode this to Salt Lake City)
-# call function to clean data => create python dict (lets call this clean_data)
-#   (this will need a list of items the user wants to keep, I will hardcode this)
-#   (this will also need the dictionary from the API data)
-# call function to change data => create python dict (lets call this changed_data)
+def main():
+  raw_data = get_data() # will later add sys as arguments
+  clean_data = clean_data(raw_data) # second arg can be sys later
 
-# use the json dumps feature to change the changed_data dict to JSON output
-# save this new JSON data (lets call this json_finished_data)
+  # call function to change data => this will just change the dict
 
-# print that the object was succesfully created
+  return json.dumps(clean_data)
+  # finished product, ready for use :)
+
+main()
