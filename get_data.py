@@ -7,7 +7,7 @@ def get_data(latitude=40.746216, longitude=-111.905396):
   params = {
     "latitude" : latitude,
     "longitude": longitude,
-    "daily"    : "sunrise, sunset".
+    "daily"    : "sunrise,sunset",
     "timezone" : "auto"
     }
   response = requests.get(url, params=params)
