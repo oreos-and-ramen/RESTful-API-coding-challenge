@@ -99,3 +99,7 @@ I, like I mentioned before, haven't gotten information from API's before so I wa
 The clean_data file was straight forward enough. I didn't have any notable issues in writing this one. 
 
 **Note:** I wrote in my pseudocode that I would hardcode the variables in main, but I now believe that defaults for the functions works better. I will be doing that instead.
+
+As I began to run out of time, I struggled with the change_data code. I knew this was going to be tricky in the beginning. The goal was to remove the dates fro mthe sunrise and sunset information to make it more readable. I tried to do this with splitting the string, which I believe will work, but I am having issues with getting to those strings inside the dictionary. I did not get to finish this, but I believe it would have been possible with a little more time and some line by line debugging.
+
+As for the main file, this kind of software is meant to be accessable through some other means, since I chose the backend option. The goal was to get the program to work with hardcoded defaults before I added the `sys` module to enable user control. I knew this would be a stretch, but had I the time, I would have allowed the user to input specifications for how they wanted the data displayed.
