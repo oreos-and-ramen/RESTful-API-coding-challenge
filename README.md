@@ -92,3 +92,7 @@ iterate through the dictionary
 
 ## Implementation
 -----------------
+I started with get_data. The first issue I ran into was a minor type with a "." and a ",", which I fixed quickly. After that the error I received was as follows:
+`{'error': True, 'reason': "Data corrupted at path ''. Cannot initialize ForecastVariableDaily from invalid String value sunrise, sunset."}`
+I, like I mentioned before, haven't gotten information from API's before so I wans't sure where my issue was. I showed my code to ChatGPT, where it said that some API's prefer no spaces in strings. I changed it and it worked from there.
+
