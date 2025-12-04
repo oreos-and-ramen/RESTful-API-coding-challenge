@@ -1,9 +1,16 @@
-# imports: requests
+import requests
 
-# function: get_data
-# input: latitude, longitude
-# output: python dict
-# ===================
-# get the response from the API by calling the URL with proper params
-# parse the response into python dict
-# return the python dict
+url = "https://api.open-meteo.com/v1/forecast"
+
+# defaults are for Salt Lake City
+def get_data(latitude=40.746216, longitude=-111.905396):
+  params = {
+    "latitude" : latitude,
+    "longitude": longitude,
+    "daily"    : "sunrise, sunset".
+    "timezone" : "auto"
+    }
+  response = requests.get(url, params=params)
+  data = response.json()
+
+  return data
