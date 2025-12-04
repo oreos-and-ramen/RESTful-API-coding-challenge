@@ -1,13 +1,10 @@
-# i dont want any of the internal data such as generationtime so I will clear all of that
-# for simplicities sake, I look through the dict and save things I want, and ignore the things I don't
+default_keeps = ["latitude","longitude","daily"]
 
-# function: clean_data
-# input: list of information to keep, API data (uncleaned) dict
-# output: python dict
-# ==================================
-# create new (empty) dict
-# iterate through the uncleaned dict
-#   if the key matches something on the keep list, add it to the new dict
-#   ignore if it doesn't
+def clean_data(raw_data, info_keep=default_keeps):
+  clean_data = {}
 
-# return the new dict
+  for k in raw_data:
+    if k in info_keep:
+      clean_data[k] = raw_data[k]
+
+  return clean_data
