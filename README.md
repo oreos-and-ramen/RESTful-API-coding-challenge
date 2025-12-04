@@ -3,7 +3,7 @@ A RESTful API middleman for a public API
 
 # How to Use
 --------------
-In order to use this program, you may clone this git repo. In the repository, run the `main.py` file in python. The program will pull data from the "https://open-meteo.com/" website to show you the sunrise and sunset times for seven days in the future, including today. Thank you!
+In order to use this program, you may clone this git repo. In the repository, run the `main.py` file in python. The program will pull data from the "https://open-meteo.com/" website to show you the sunrise and sunset times in Salt Lake City for seven days in the future, including today. Thank you!
 
 
 ## Requirements Analysis
