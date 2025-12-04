@@ -14,4 +14,4 @@ def get_data(latitude=40.746216, longitude=-111.905396):
     response = requests.get(url, params=params)
     data = response.json()
 
-  return data
+    return data
