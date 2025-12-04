@@ -1,11 +1,5 @@
-# the dates and times aren't sepreated but all times start with "T" before putting the time in military time
-# the daily variable in this API already includes the dates as "time", so the individuals shouldn't need the date, just the time.
-
-# function: organize times
-# input: API data dict
-# output: none
-# ========================
-# iterate through the dictionary
-#   if the key is sunrise or sunset, iterate through that
-#     remove up until the "T" to isolate the times
-# no need to return the dict, I will change it not make a new dict
+def fix_times(data):
+    for var in data["daily"]: #operating under assumtion that this will be based on daily variable
+        if var == "sunrise" or "sunset":
+            for i in data["daily"[var]]:
+                i = i.split("T", 1) # ignore past the T and just give the time
